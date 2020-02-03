@@ -45,7 +45,7 @@ public class GridFTPClient implements Runnable {
 
     String proxyFile = null;
     volatile int rv = -1;
-    static int perfFreq = 3;
+    static int perfFreq = 1;
     public boolean useDynamicScheduling = false;
     public boolean useOnlineTuning =  false;
 
@@ -81,11 +81,8 @@ public class GridFTPClient implements Runnable {
             channelPair.setBufferSize(params.getBufferSize());
             channelPair.setPerfFreq(perfFreq);
             if (!channelPair.isDataChannelReady()) {
-                if (channelPair.dc.local || !channelPair.gridftp) {
-                    channelPair.setTypeAndMode('I', 'S');
-                } else {
-                    channelPair.setTypeAndMode('I', 'E');
-                }
+                // Use extended mode to be able to reuse the channel for multi-file transfers
+                channelPair.setTypeAndMode('I', 'E');
                 if (channelPair.isStripingEnabled()) {
                     HostPortList hpl = channelPair.setStripedPassive();
                     channelPair.setStripedActive(hpl);
@@ -114,7 +111,6 @@ public class GridFTPClient implements Runnable {
                 FileInputStream fis = new FileInputStream(cred_file);
                 byte[] cred_bytes = new byte[(int) cred_file.length()];
                 fis.read(cred_bytes);
-                System.out.println("Setting parameters");
                 //GSSManager manager = ExtendedGSSManager.getInstance();
                 ExtendedGSSManager gm = (ExtendedGSSManager) ExtendedGSSManager.getInstance();
                 cred = gm.createCredential(cred_bytes,
@@ -152,7 +148,6 @@ public class GridFTPClient implements Runnable {
         } else if (su.path.endsWith("/") && !du.path.endsWith("/")) {
             fatal("src is a directory, but dest is not");
         }
-        System.out.println("Done parameters");
         ftpClient.fileClusters = new LinkedList<>();
     }
 
@@ -294,14 +289,14 @@ public class GridFTPClient implements Runnable {
     public void waitForTransferCompletion() {
         // Check if all the files in all chunks are transferred
         for (FileCluster fileCluster: ftpClient.fileClusters)
-        try {
-            while (fileCluster.getRecords().totalTransferredSize < fileCluster.getRecords().initialSize) {
-                Thread.sleep(100);
+            try {
+                while (fileCluster.getRecords().totalTransferredSize < fileCluster.getRecords().initialSize) {
+                    Thread.sleep(100);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.exit(-1);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.exit(-1);
-        }
         //Close all channels before exiting
         for (int i = 1; i < ftpClient.channelList.size(); i++) {
             ftpClient.channelList.get(i).close();
@@ -664,15 +659,15 @@ public class GridFTPClient implements Runnable {
             //if (chunk.getRecords().channels.size() != chunk.getTunableParameters().getConcurrency()) {
             //  return;
             //}
-        /*
-        for (ChannelPair channel : chunk.getRecords().channels) {
-          if (channel.parallelism != chunk.getTunableParameters().getParallelism()) {
-            chunk.popFromSeries(); // Dont insert latest probing as it was collected during transition phase
-            System.out.println("Channel " + channel.getId() + " P:" + channel.parallelism + " chunkP:" + chunk.getTunableParameters().getParallelism());
-            return;
-          }
-        }
-        */
+            /*
+            for (ChannelPair channel : chunk.getRecords().channels) {
+              if (channel.parallelism != chunk.getTunableParameters().getParallelism()) {
+                chunk.popFromSeries(); // Dont insert latest probing as it was collected during transition phase
+                System.out.println("Channel " + channel.getId() + " P:" + channel.parallelism + " chunkP:" + chunk.getTunableParameters().getParallelism());
+                return;
+              }
+            }
+            */
 
             List<TunableParameters> lastNEstimations = chunk.getLastNFromSeries(pastLimit);
             // If this is first estimation, use it only; otherwise make sure to have pastLimit items
@@ -755,7 +750,7 @@ public class GridFTPClient implements Runnable {
         }
 
         int getUpdatedParameterValue (int []pastValues, int currentValue) {
-            System.out.println("Past values " + currentValue + ", "+ Arrays.toString(pastValues));
+            // System.out.println("Past values " + currentValue + ", "+ Arrays.toString(pastValues));
 
             boolean isLarger = pastValues[0] > currentValue;
             boolean isAllLargeOrSmall = true;

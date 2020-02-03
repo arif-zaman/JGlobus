@@ -32,7 +32,6 @@ public class Similarity {
       File freader = new File(fname);
       String fileName = freader.getName();
       CSVReader reader = new CSVReader(new FileReader(fname), ',');
-      //System.out.println("Reading "+fname+"...");
       //read line by line
       String[] header = reader.readNext();
       Map<String, Integer> attributeIndices = new HashMap<String, Integer>();
@@ -276,7 +275,7 @@ public class Similarity {
     Similarity similarity = new Similarity();
     similarity.measureCosineSimilarity(targetEntry, entries);
     List<Entry> mostSimilarEntries = new LinkedList<Entry>();
-
+    LOG.info("Similarity calcualtions:"+similarityThreshold+" Entries:"+entries.size());
     int counter = 0;
     while (counter < 6000) {
       counter = 0;
@@ -290,8 +289,9 @@ public class Similarity {
         }
       }
       similarityThreshold -= 0.001;
+      LOG.info("Similarity threshold updated:"+similarityThreshold+" Count:"+counter);
     }
-    //LogManager.writeToLog("Similarity threshold updated:"+similarityThreshold+" Count:"+counter, ConfigurationParams.STDOUT_ID);
+    LOG.info("Similarity threshold updated:"+similarityThreshold+" Count:"+counter);
     return mostSimilarEntries;
   }
 
@@ -408,14 +408,16 @@ public class Similarity {
 
     double maxSimilarity = 0;
     Entry maxEntry = null;
+    for (int i = 0; i< target.specVector.size(); i++)
+      System.out.println("Target spec val " + i +" value:" + target.specVector.get(i));
     for (List<Entry> entryList : entries) {
+      LOG.info("Checking new entry with " +entryList.size() + " elements");
       for (Entry e : entryList) {
-
-        double similarityValue = 0;
+        double similarityValue;
 
 				/*
       target.specVector.add(1.0);
-			if(target.getTestbed() != null && target.getTestbed().compareTo(e.getTestbed()) == 0)
+	    if(target.getTestbed() != null && target.getTestbed().compareTo(e.getTestbed()) == 0)
 				e.specVector.add(1.0);
 			else
 				e.specVector.add(0.0);
@@ -436,9 +438,10 @@ public class Similarity {
           maxSimilarity = similarityValue;
           maxEntry = e;
         }
+        //System.out.println("Similarity value " + similarityValue + " maximum" + maxSimilarity);
         //e.specVector.remove(e.specVector.size()-1);
         //target.specVector.remove(target.specVector.size()-1);
-        if (similarityValue < 0.01) {
+        if (similarityValue < 0.1) {
           LOG.fatal("Unexpected similarity value:" + similarityValue);
           for (int i = 0; i < e.specVector.size(); i++) {
             LOG.fatal(e.specVector.get(i) +
@@ -504,8 +507,9 @@ public class Similarity {
     }
     //System.exit(-1);
     //maxEntry.printEntry(Double.toString(maxSimilarity));
-    //LogManager.writeToLog("Max MlsxEntry:"+maxEntry.printEntry(Double.toString(maxSimilarity)), ConfigurationParams.STDOUT_ID);
-
+    //
+    // LogManager.writeToLog("Max MlsxEntry:"+maxEntry.printEntry(Double.toString(maxSimilarity)), ConfigurationParams.STDOUT_ID);
+    System.out.println("Maximum similarity " + maxSimilarity);
     Similarity.similarityThreshold = maxSimilarity;
     //System.out.println("similarity size:"+cosineSimilarity.size());
     //ValueComparator bvc =  new ValueComparator(cosineSimilarity);

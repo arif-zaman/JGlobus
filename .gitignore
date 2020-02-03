@@ -15,5 +15,3 @@ test-output
 .gitignore~
 *.java~
 *.xml~
-*.log
-*.DS_Store

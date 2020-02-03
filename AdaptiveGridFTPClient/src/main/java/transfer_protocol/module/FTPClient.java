@@ -70,8 +70,8 @@ public class FTPClient {
         LinkedList<String> dirs = new LinkedList<String>();
         dirs.add("");
         cc.rc.exchange("OPTS MLST type;size;");
-        //reply = cc.rc.exchange("PBSZ 1048576;");
-        //System.out.println(reply.getCode() + "\t" + reply.getMessage());
+        Reply reply = cc.rc.exchange("PBSZ 1048576;");
+        System.out.println(reply.getCode() + "\t" + reply.getMessage());
         // Keep listing and building subdirectory lists.
 
         // TODO: Replace with pipelining structure.
@@ -179,7 +179,7 @@ public class FTPClient {
     public XferList getListofFiles(String sp, String dp) throws Exception {
         checkTransfer();
 
-        checkTransfer();
+        //checkTransfer();
         XferList xl;
         // Some quick sanity checking.
         if (sp == null || sp.isEmpty()) {

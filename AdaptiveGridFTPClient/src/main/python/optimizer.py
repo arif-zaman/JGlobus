@@ -56,6 +56,7 @@ def read_data_from_file(file_id):
         name, size, similarity_ = file_id.next().strip().split()  # skip first line
         data = np.genfromtxt(itertools.islice(file_id, int(size)), delimiter=' ')
         similarity = float(similarity_)
+        print len(data), similarity
         return data, name, size, similarity*100
     except:
         return None, None, None, None
@@ -149,18 +150,18 @@ def main():
         global maxcc
         maxcc = options.maxcc
     
-    file_name = os.path.join(os.getcwd(), '../../target', chunk_name)
+    file_name = os.path.join(os.getcwd(), 'target', chunk_name)
 
     resource_package = __name__  # Could be any module/package name
     resource_path = '/' + chunk_name  # Do not use os.path.join(), see below
-    print resource_package, sys.path
-    fin = pkg_resources.resource_stream(resource_package, resource_path)
+    print resource_package, resource_path
+    #fin = pkg_resources.resource_stream(resource_package, resource_path)
 
-    #print file_name
+    print file_name
     #sys.exit()
     discarded_data_counter = 0
     all_experiments = []
-    #fin = open(file_name, 'r')
+    fin = open(file_name, 'r')
     data, name, size, similarity = read_data_from_file(fin)
     while data is not None:
         data_copy = np.array(data)
@@ -187,14 +188,14 @@ def main():
     all_experiments.sort(key=lambda x: x.closeness, reverse=True)
     for experiment in all_experiments:
         experiment.run_parameter_relaxation(options.cc_rate, options.p_rate, options.ppq_rate)
-        #print experiment.name, experiment.estimated_troughput, " diff:", experiment.closeness, experiment.similarity, experiment.relaxed_params
+        print experiment.name, experiment.estimated_troughput, " diff:", experiment.closeness, experiment.similarity, experiment.relaxed_params
 
     all_experiments.sort(key=lambda x: x.closeness, reverse=True)
     attrs = [experiment.closeness for experiment in all_experiments]
 
     #print attrs
     X = np.array(attrs, dtype=np.float)
-    #print X
+    print X
     bandwidth = estimate_bandwidth(X, quantile=0.2)
     ms = MeanShift(bandwidth=bandwidth, bin_seeding=True)
     ms.fit(X)
@@ -260,7 +261,7 @@ def main():
         weight = experiment.similarity_weight * experiment.closeness_weight
         total_weight += weight
         weighted_params = [param * weight for param in experiment.relaxed_params]
-        print "HEYYY", experiment.name, experiment.closeness, experiment.closeness_weight, experiment.similarity_weight, weight,  experiment.relaxed_params, experiment.first_row
+        #print "HEYYY", experiment.name, experiment.closeness, experiment.closeness_weight, experiment.similarity_weight, weight,  experiment.relaxed_params, experiment.first_row
         total_params = map(add, total_params, weighted_params)
         total_thr += weight * experiment.relaxed_throughput
 

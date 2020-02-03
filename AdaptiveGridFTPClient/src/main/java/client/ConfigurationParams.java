@@ -9,7 +9,7 @@ import java.io.*;
 
 public class ConfigurationParams {
   private static final Log LOG = LogFactory.getLog(ChannelModule.class);
-  public static String INPUT_DIR = "/Users/earslan/HARP/historical_data/activeFiles/";
+  public static String INPUT_DIR = "/home/earslan/JGlobus/AdaptiveGridFTPClient/";
   public static String OUTPUT_DIR = "/Users/earslan/HARP/target/";
   public static long MAXIMUM_SINGLE_FILE_SIZE = 1024 * 1024 * 1024; // 1GB
   public static double cc_rate = 0.7;
