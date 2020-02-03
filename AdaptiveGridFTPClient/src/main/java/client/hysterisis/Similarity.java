@@ -332,7 +332,7 @@ public class Similarity {
       historicalDataSamples.put(list, totalSimilarity/list.size());
     }
 
-    File theDir = new File("out");
+    File theDir = new File("target");
 
     // if the directory does not exist, create it
     if (!theDir.exists()) {
