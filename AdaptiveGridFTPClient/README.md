@@ -23,10 +23,10 @@ https://ieeexplore.ieee.org/abstract/document/8249824
 
 1. cd into JGlobus folder and run `mvn compile; mvn install` if you face test failures, add `-DskipTests` option to commands
 2. cd into AdaptiveGridFTPClient folder and run `mvn compile` 
-3. Add a configuration file (config.cfg) in src/main/resources/ and edit as described below (Make sure to enter correct bandwidth and RTT values)
+3. Add a configuration file (config.cfg) in src/main/resources/ and edit as described below (Make sure to enter correct bandwidth and RTT values). See the sample config file in  src/main/resources/sample_config.cfg
 4. Run `mvn exec:java` to run the code
 
-## Configuration Fi 
+## Configuration File
   **-s** $Source_GridFTP_Server  
   **-d** $Destination_GridFTP_Server  
   **-proxy** $Proxy_file_path (Default will try to read from /tmp for running user id)  
