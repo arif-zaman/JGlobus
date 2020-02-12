@@ -1,0 +1,545 @@
+2020-02-07 10:52:01 INFO  ChannelModule:107 - source  = ftp://134.197.76.5:50505/data/gpfs/assoc/coen/users/hsapkota/from/
+2020-02-07 10:52:01 INFO  ChannelModule:116 - destination = ftp://134.197.76.4:50505/data/gpfs/assoc/coen/users/hsapkota/to/
+2020-02-07 10:52:01 INFO  ChannelModule:141 - rtt = 0.002 ms
+2020-02-07 10:52:01 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-07 10:52:01 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-07 10:52:01 INFO  ChannelModule:150 - cc = 10
+2020-02-07 10:52:01 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-07 10:52:01 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-07 10:52:02 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.023 data size:500 GB
+2020-02-07 10:52:02 INFO  Utils:131 - Chunk 0:	files:25	 avg:20 GB 	 total:500 GB Density:HUGE
+2020-02-07 10:52:02 ERROR Hysteresis:71 - Cannot access to /Users/earslan/Downloads/JGlobus/AdaptiveGridFTPClient/historical_data/activeFiles
+2020-02-07 10:52:37 INFO  ChannelModule:107 - source  = ftp://134.197.76.5:50505/data/gpfs/assoc/coen/users/hsapkota/from/
+2020-02-07 10:52:37 INFO  ChannelModule:116 - destination = ftp://134.197.76.4:50505/data/gpfs/assoc/coen/users/hsapkota/to/
+2020-02-07 10:52:37 INFO  ChannelModule:141 - rtt = 0.002 ms
+2020-02-07 10:52:37 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-07 10:52:37 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-07 10:52:37 INFO  ChannelModule:150 - cc = 10
+2020-02-07 10:52:37 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-07 10:52:37 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-07 10:52:37 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.016 data size:500 GB
+2020-02-07 10:52:37 INFO  Utils:131 - Chunk 0:	files:25	 avg:20 GB 	 total:500 GB Density:HUGE
+2020-02-07 10:52:38 INFO  Similarity:414 - Checking new entry with 4094 elements
+2020-02-07 10:52:38 INFO  Similarity:414 - Checking new entry with 2574 elements
+2020-02-07 10:52:38 INFO  Similarity:414 - Checking new entry with 11312 elements
+2020-02-07 10:52:38 INFO  Similarity:414 - Checking new entry with 2671 elements
+2020-02-07 10:52:38 INFO  Similarity:414 - Checking new entry with 4659 elements
+2020-02-07 10:52:38 INFO  Similarity:414 - Checking new entry with 9781 elements
+2020-02-07 10:52:38 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-07 10:52:38 INFO  Similarity:414 - Checking new entry with 2349 elements
+2020-02-07 10:52:38 INFO  Similarity:414 - Checking new entry with 4299 elements
+2020-02-07 10:52:38 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-07 10:52:38 INFO  Similarity:414 - Checking new entry with 4314 elements
+2020-02-07 10:52:38 INFO  Similarity:414 - Checking new entry with 4961 elements
+2020-02-07 10:52:38 INFO  Similarity:278 - Similarity calcualtions:0.4096258887299286 Entries:12
+2020-02-07 10:52:38 INFO  Similarity:292 - Similarity threshold updated:0.4086258887299286 Count:4748
+2020-02-07 10:52:38 INFO  Similarity:292 - Similarity threshold updated:0.4076258887299286 Count:4748
+2020-02-07 10:52:38 INFO  Similarity:292 - Similarity threshold updated:0.4066258887299286 Count:4748
+2020-02-07 10:52:38 INFO  Similarity:292 - Similarity threshold updated:0.4056258887299286 Count:4748
+2020-02-07 10:52:38 INFO  Similarity:292 - Similarity threshold updated:0.4046258887299286 Count:4748
+2020-02-07 10:52:38 INFO  Similarity:292 - Similarity threshold updated:0.4036258887299286 Count:8180
+2020-02-07 10:52:38 INFO  Similarity:294 - Similarity threshold updated:0.4036258887299286 Count:8180
+2020-02-07 10:52:38 INFO  Hysteresis:116 - Chunk 0 entries are categorized and written to disk at 
+2020-02-07 10:52:38 INFO  AdaptiveGridFTPClient:123 -  Running MC with :2 channels.
+2020-02-07 10:52:38 INFO  AdaptiveGridFTPClient:125 - Chunk :HUGE cc:2 p:1 ppq:0
+2020-02-07 10:52:38 INFO  GridFTPClient:247 - Transferring chunk HUGE params:Concurrency:2	Paralellism:1	Pipelining:0 33554432 file count:25 size:512000.0
+2020-02-07 10:53:33 INFO  ChannelModule:107 - source  = ftp://134.197.76.5:50505/data/gpfs/assoc/coen/users/hsapkota/from/
+2020-02-07 10:53:33 INFO  ChannelModule:116 - destination = ftp://134.197.76.4:50505/data/gpfs/assoc/coen/users/hsapkota/to/
+2020-02-07 10:53:33 INFO  ChannelModule:141 - rtt = 0.002 ms
+2020-02-07 10:53:33 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-07 10:53:33 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-07 10:53:33 INFO  ChannelModule:150 - cc = 10
+2020-02-07 10:53:33 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-07 10:53:33 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-07 10:53:33 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.017 data size:500 GB
+2020-02-07 10:53:33 INFO  Utils:131 - Chunk 0:	files:25	 avg:20 GB 	 total:500 GB Density:HUGE
+2020-02-07 10:53:34 INFO  Similarity:414 - Checking new entry with 4094 elements
+2020-02-07 10:53:34 INFO  Similarity:414 - Checking new entry with 2574 elements
+2020-02-07 10:53:34 INFO  Similarity:414 - Checking new entry with 11312 elements
+2020-02-07 10:53:34 INFO  Similarity:414 - Checking new entry with 2671 elements
+2020-02-07 10:53:34 INFO  Similarity:414 - Checking new entry with 4659 elements
+2020-02-07 10:53:34 INFO  Similarity:414 - Checking new entry with 9781 elements
+2020-02-07 10:53:34 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-07 10:53:34 INFO  Similarity:414 - Checking new entry with 2349 elements
+2020-02-07 10:53:34 INFO  Similarity:414 - Checking new entry with 4299 elements
+2020-02-07 10:53:34 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-07 10:53:34 INFO  Similarity:414 - Checking new entry with 4314 elements
+2020-02-07 10:53:34 INFO  Similarity:414 - Checking new entry with 4961 elements
+2020-02-07 10:53:34 INFO  Similarity:278 - Similarity calcualtions:0.4096258887299286 Entries:12
+2020-02-07 10:53:34 INFO  Similarity:292 - Similarity threshold updated:0.4086258887299286 Count:4748
+2020-02-07 10:53:34 INFO  Similarity:292 - Similarity threshold updated:0.4076258887299286 Count:4748
+2020-02-07 10:53:34 INFO  Similarity:292 - Similarity threshold updated:0.4066258887299286 Count:4748
+2020-02-07 10:53:34 INFO  Similarity:292 - Similarity threshold updated:0.4056258887299286 Count:4748
+2020-02-07 10:53:34 INFO  Similarity:292 - Similarity threshold updated:0.4046258887299286 Count:4748
+2020-02-07 10:53:34 INFO  Similarity:292 - Similarity threshold updated:0.4036258887299286 Count:8180
+2020-02-07 10:53:34 INFO  Similarity:294 - Similarity threshold updated:0.4036258887299286 Count:8180
+2020-02-07 10:53:34 INFO  Hysteresis:116 - Chunk 0 entries are categorized and written to disk at 
+2020-02-07 10:53:34 INFO  AdaptiveGridFTPClient:123 -  Running MC with :2 channels.
+2020-02-07 10:53:34 INFO  AdaptiveGridFTPClient:125 - Chunk :HUGE cc:2 p:1 ppq:0
+2020-02-07 10:53:34 INFO  GridFTPClient:247 - Transferring chunk HUGE params:Concurrency:2	Paralellism:1	Pipelining:0 33554432 file count:25 size:512000.0
+2020-02-07 10:53:42 INFO  ChannelModule:107 - source  = ftp://134.197.76.5:50505/data/gpfs/assoc/coen/users/hsapkota/from/
+2020-02-07 10:53:42 INFO  ChannelModule:116 - destination = ftp://134.197.76.4:50505/data/gpfs/assoc/coen/users/hsapkota/to/
+2020-02-07 10:53:42 INFO  ChannelModule:141 - rtt = 0.002 ms
+2020-02-07 10:53:42 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-07 10:53:42 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-07 10:53:42 INFO  ChannelModule:150 - cc = 10
+2020-02-07 10:53:42 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-07 10:53:42 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-07 10:53:42 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.016 data size:500 GB
+2020-02-07 10:53:42 INFO  Utils:131 - Chunk 0:	files:25	 avg:20 GB 	 total:500 GB Density:HUGE
+2020-02-07 10:53:43 INFO  Similarity:414 - Checking new entry with 4094 elements
+2020-02-07 10:53:43 INFO  Similarity:414 - Checking new entry with 2574 elements
+2020-02-07 10:53:43 INFO  Similarity:414 - Checking new entry with 11312 elements
+2020-02-07 10:53:43 INFO  Similarity:414 - Checking new entry with 2671 elements
+2020-02-07 10:53:43 INFO  Similarity:414 - Checking new entry with 4659 elements
+2020-02-07 10:53:43 INFO  Similarity:414 - Checking new entry with 9781 elements
+2020-02-07 10:53:43 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-07 10:53:43 INFO  Similarity:414 - Checking new entry with 2349 elements
+2020-02-07 10:53:43 INFO  Similarity:414 - Checking new entry with 4299 elements
+2020-02-07 10:53:43 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-07 10:53:43 INFO  Similarity:414 - Checking new entry with 4314 elements
+2020-02-07 10:53:43 INFO  Similarity:414 - Checking new entry with 4961 elements
+2020-02-07 10:53:43 INFO  Similarity:278 - Similarity calcualtions:0.4096258887299286 Entries:12
+2020-02-07 10:53:43 INFO  Similarity:292 - Similarity threshold updated:0.4086258887299286 Count:4748
+2020-02-07 10:53:43 INFO  Similarity:292 - Similarity threshold updated:0.4076258887299286 Count:4748
+2020-02-07 10:53:43 INFO  Similarity:292 - Similarity threshold updated:0.4066258887299286 Count:4748
+2020-02-07 10:53:43 INFO  Similarity:292 - Similarity threshold updated:0.4056258887299286 Count:4748
+2020-02-07 10:53:43 INFO  Similarity:292 - Similarity threshold updated:0.4046258887299286 Count:4748
+2020-02-07 10:53:43 INFO  Similarity:292 - Similarity threshold updated:0.4036258887299286 Count:8180
+2020-02-07 10:53:43 INFO  Similarity:294 - Similarity threshold updated:0.4036258887299286 Count:8180
+2020-02-07 10:53:43 INFO  Hysteresis:116 - Chunk 0 entries are categorized and written to disk at 
+2020-02-07 10:53:43 INFO  AdaptiveGridFTPClient:123 -  Running MC with :2 channels.
+2020-02-07 10:53:43 INFO  AdaptiveGridFTPClient:125 - Chunk :HUGE cc:2 p:1 ppq:0
+2020-02-07 10:53:43 INFO  GridFTPClient:247 - Transferring chunk HUGE params:Concurrency:2	Paralellism:1	Pipelining:0 33554432 file count:25 size:512000.0
+2020-02-07 11:01:21 INFO  AdaptiveGridFTPClient:138 - MULTICHUNK	fileClusters	4	maxCC	10 Throughput:9377.657851528384
+2020-02-07 11:03:57 INFO  ChannelModule:107 - source  = ftp://134.197.76.5:50505/data/gpfs/assoc/coen/users/hsapkota/from/
+2020-02-07 11:03:57 INFO  ChannelModule:116 - destination = ftp://134.197.76.4:50505/data/gpfs/assoc/coen/users/hsapkota/to/
+2020-02-07 11:03:57 INFO  ChannelModule:141 - rtt = 0.002 ms
+2020-02-07 11:03:57 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-07 11:03:57 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-07 11:03:57 INFO  ChannelModule:150 - cc = 10
+2020-02-07 11:03:57 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-07 11:03:57 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-07 11:03:57 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.016 data size:500 GB
+2020-02-07 11:03:57 INFO  Utils:131 - Chunk 0:	files:25	 avg:20 GB 	 total:500 GB Density:HUGE
+2020-02-07 11:03:58 INFO  Similarity:414 - Checking new entry with 4094 elements
+2020-02-07 11:03:58 INFO  Similarity:414 - Checking new entry with 2574 elements
+2020-02-07 11:03:58 INFO  Similarity:414 - Checking new entry with 11312 elements
+2020-02-07 11:03:58 INFO  Similarity:414 - Checking new entry with 2671 elements
+2020-02-07 11:03:58 INFO  Similarity:414 - Checking new entry with 4659 elements
+2020-02-07 11:03:58 INFO  Similarity:414 - Checking new entry with 9781 elements
+2020-02-07 11:03:58 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-07 11:03:58 INFO  Similarity:414 - Checking new entry with 2349 elements
+2020-02-07 11:03:58 INFO  Similarity:414 - Checking new entry with 4299 elements
+2020-02-07 11:03:58 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-07 11:03:58 INFO  Similarity:414 - Checking new entry with 4314 elements
+2020-02-07 11:03:58 INFO  Similarity:414 - Checking new entry with 4961 elements
+2020-02-07 11:03:58 INFO  Similarity:278 - Similarity calcualtions:0.4096258887299286 Entries:12
+2020-02-07 11:03:58 INFO  Similarity:292 - Similarity threshold updated:0.4086258887299286 Count:4748
+2020-02-07 11:03:58 INFO  Similarity:292 - Similarity threshold updated:0.4076258887299286 Count:4748
+2020-02-07 11:03:58 INFO  Similarity:292 - Similarity threshold updated:0.4066258887299286 Count:4748
+2020-02-07 11:03:58 INFO  Similarity:292 - Similarity threshold updated:0.4056258887299286 Count:4748
+2020-02-07 11:03:58 INFO  Similarity:292 - Similarity threshold updated:0.4046258887299286 Count:4748
+2020-02-07 11:03:58 INFO  Similarity:292 - Similarity threshold updated:0.4036258887299286 Count:8180
+2020-02-07 11:03:58 INFO  Similarity:294 - Similarity threshold updated:0.4036258887299286 Count:8180
+2020-02-07 11:03:58 INFO  Hysteresis:116 - Chunk 0 entries are categorized and written to disk at 
+2020-02-07 11:03:58 INFO  AdaptiveGridFTPClient:123 -  Running MC with :2 channels.
+2020-02-07 11:03:58 INFO  AdaptiveGridFTPClient:125 - Chunk :HUGE cc:2 p:1 ppq:0
+2020-02-07 11:03:58 INFO  GridFTPClient:247 - Transferring chunk HUGE params:Concurrency:2	Paralellism:1	Pipelining:0 33554432 file count:25 size:512000.0
+2020-02-07 11:11:36 INFO  AdaptiveGridFTPClient:138 - MULTICHUNK	fileClusters	4	maxCC	10 Throughput:9398.17789059081
+2020-02-07 11:12:19 INFO  ChannelModule:107 - source  = ftp://134.197.76.5:50505/data/gpfs/assoc/coen/users/hsapkota/from/
+2020-02-07 11:12:19 INFO  ChannelModule:116 - destination = ftp://134.197.76.4:50505/data/gpfs/assoc/coen/users/hsapkota/to/
+2020-02-07 11:12:19 INFO  ChannelModule:141 - rtt = 0.002 ms
+2020-02-07 11:12:19 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-07 11:12:19 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-07 11:12:19 INFO  ChannelModule:150 - cc = 10
+2020-02-07 11:12:19 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-07 11:12:19 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-07 11:12:19 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.017 data size:500 GB
+2020-02-07 11:12:19 INFO  Utils:131 - Chunk 0:	files:25	 avg:20 GB 	 total:500 GB Density:HUGE
+2020-02-07 11:12:20 INFO  Similarity:414 - Checking new entry with 4094 elements
+2020-02-07 11:12:20 INFO  Similarity:414 - Checking new entry with 2574 elements
+2020-02-07 11:12:20 INFO  Similarity:414 - Checking new entry with 11312 elements
+2020-02-07 11:12:20 INFO  Similarity:414 - Checking new entry with 2671 elements
+2020-02-07 11:12:20 INFO  Similarity:414 - Checking new entry with 4659 elements
+2020-02-07 11:12:20 INFO  Similarity:414 - Checking new entry with 9781 elements
+2020-02-07 11:12:20 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-07 11:12:20 INFO  Similarity:414 - Checking new entry with 2349 elements
+2020-02-07 11:12:20 INFO  Similarity:414 - Checking new entry with 4299 elements
+2020-02-07 11:12:20 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-07 11:12:20 INFO  Similarity:414 - Checking new entry with 4314 elements
+2020-02-07 11:12:20 INFO  Similarity:414 - Checking new entry with 4961 elements
+2020-02-07 11:12:20 INFO  Similarity:278 - Similarity calcualtions:0.4096258887299286 Entries:12
+2020-02-07 11:12:20 INFO  Similarity:292 - Similarity threshold updated:0.4086258887299286 Count:4748
+2020-02-07 11:12:20 INFO  Similarity:292 - Similarity threshold updated:0.4076258887299286 Count:4748
+2020-02-07 11:12:20 INFO  Similarity:292 - Similarity threshold updated:0.4066258887299286 Count:4748
+2020-02-07 11:12:20 INFO  Similarity:292 - Similarity threshold updated:0.4056258887299286 Count:4748
+2020-02-07 11:12:20 INFO  Similarity:292 - Similarity threshold updated:0.4046258887299286 Count:4748
+2020-02-07 11:12:20 INFO  Similarity:292 - Similarity threshold updated:0.4036258887299286 Count:8180
+2020-02-07 11:12:20 INFO  Similarity:294 - Similarity threshold updated:0.4036258887299286 Count:8180
+2020-02-07 11:12:20 INFO  Hysteresis:116 - Chunk 0 entries are categorized and written to disk at 
+2020-02-07 11:12:20 INFO  AdaptiveGridFTPClient:123 -  Running MC with :2 channels.
+2020-02-07 11:12:20 INFO  AdaptiveGridFTPClient:125 - Chunk :HUGE cc:2 p:1 ppq:0
+2020-02-07 11:12:20 INFO  GridFTPClient:247 - Transferring chunk HUGE params:Concurrency:2	Paralellism:1	Pipelining:0 33554432 file count:25 size:512000.0
+2020-02-07 11:12:44 INFO  ChannelModule:107 - source  = ftp://134.197.76.5:50505/data/gpfs/assoc/coen/users/hsapkota/from/
+2020-02-07 11:12:44 INFO  ChannelModule:116 - destination = ftp://134.197.76.4:50505/data/gpfs/assoc/coen/users/hsapkota/to/
+2020-02-07 11:12:44 INFO  ChannelModule:141 - rtt = 0.002 ms
+2020-02-07 11:12:44 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-07 11:12:44 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-07 11:12:44 INFO  ChannelModule:150 - cc = 10
+2020-02-07 11:12:44 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-07 11:12:44 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-07 11:12:44 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.021 data size:500 GB
+2020-02-07 11:12:44 INFO  Utils:131 - Chunk 0:	files:25	 avg:20 GB 	 total:500 GB Density:HUGE
+2020-02-07 11:12:44 INFO  Similarity:414 - Checking new entry with 4094 elements
+2020-02-07 11:12:44 INFO  Similarity:414 - Checking new entry with 2574 elements
+2020-02-07 11:12:44 INFO  Similarity:414 - Checking new entry with 11312 elements
+2020-02-07 11:12:44 INFO  Similarity:414 - Checking new entry with 2671 elements
+2020-02-07 11:12:44 INFO  Similarity:414 - Checking new entry with 4659 elements
+2020-02-07 11:12:44 INFO  Similarity:414 - Checking new entry with 9781 elements
+2020-02-07 11:12:44 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-07 11:12:44 INFO  Similarity:414 - Checking new entry with 2349 elements
+2020-02-07 11:12:44 INFO  Similarity:414 - Checking new entry with 4299 elements
+2020-02-07 11:12:44 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-07 11:12:44 INFO  Similarity:414 - Checking new entry with 4314 elements
+2020-02-07 11:12:44 INFO  Similarity:414 - Checking new entry with 4961 elements
+2020-02-07 11:12:44 INFO  Similarity:278 - Similarity calcualtions:0.4096258887299286 Entries:12
+2020-02-07 11:12:44 INFO  Similarity:292 - Similarity threshold updated:0.4086258887299286 Count:4748
+2020-02-07 11:12:44 INFO  Similarity:292 - Similarity threshold updated:0.4076258887299286 Count:4748
+2020-02-07 11:12:44 INFO  Similarity:292 - Similarity threshold updated:0.4066258887299286 Count:4748
+2020-02-07 11:12:44 INFO  Similarity:292 - Similarity threshold updated:0.4056258887299286 Count:4748
+2020-02-07 11:12:44 INFO  Similarity:292 - Similarity threshold updated:0.4046258887299286 Count:4748
+2020-02-07 11:12:44 INFO  Similarity:292 - Similarity threshold updated:0.4036258887299286 Count:8180
+2020-02-07 11:12:44 INFO  Similarity:294 - Similarity threshold updated:0.4036258887299286 Count:8180
+2020-02-07 11:12:44 INFO  Hysteresis:116 - Chunk 0 entries are categorized and written to disk at 
+2020-02-07 11:12:44 INFO  AdaptiveGridFTPClient:123 -  Running MC with :2 channels.
+2020-02-07 11:12:44 INFO  AdaptiveGridFTPClient:125 - Chunk :HUGE cc:2 p:1 ppq:0
+2020-02-07 11:12:44 INFO  GridFTPClient:247 - Transferring chunk HUGE params:Concurrency:2	Paralellism:1	Pipelining:0 33554432 file count:25 size:512000.0
+2020-02-07 11:28:47 INFO  ChannelModule:107 - source  = ftp://134.197.76.5:50505/data/gpfs/assoc/coen/users/hsapkota/from/
+2020-02-07 11:28:47 INFO  ChannelModule:116 - destination = ftp://134.197.76.4:50505/data/gpfs/assoc/coen/users/hsapkota/to/
+2020-02-07 11:28:47 INFO  ChannelModule:141 - rtt = 0.002 ms
+2020-02-07 11:28:47 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-07 11:28:47 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-07 11:28:47 INFO  ChannelModule:150 - cc = 10
+2020-02-07 11:28:47 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-07 11:28:47 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-07 11:28:47 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.018 data size:500 GB
+2020-02-07 11:28:47 INFO  Utils:131 - Chunk 0:	files:25	 avg:20 GB 	 total:500 GB Density:HUGE
+2020-02-07 11:28:47 INFO  Similarity:414 - Checking new entry with 4094 elements
+2020-02-07 11:28:47 INFO  Similarity:414 - Checking new entry with 2574 elements
+2020-02-07 11:28:47 INFO  Similarity:414 - Checking new entry with 11312 elements
+2020-02-07 11:28:47 INFO  Similarity:414 - Checking new entry with 2671 elements
+2020-02-07 11:28:47 INFO  Similarity:414 - Checking new entry with 4659 elements
+2020-02-07 11:28:47 INFO  Similarity:414 - Checking new entry with 9781 elements
+2020-02-07 11:28:47 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-07 11:28:47 INFO  Similarity:414 - Checking new entry with 2349 elements
+2020-02-07 11:28:47 INFO  Similarity:414 - Checking new entry with 4299 elements
+2020-02-07 11:28:47 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-07 11:28:47 INFO  Similarity:414 - Checking new entry with 4314 elements
+2020-02-07 11:28:47 INFO  Similarity:414 - Checking new entry with 4961 elements
+2020-02-07 11:28:47 INFO  Similarity:278 - Similarity calcualtions:0.4096258887299286 Entries:12
+2020-02-07 11:28:47 INFO  Similarity:292 - Similarity threshold updated:0.4086258887299286 Count:4748
+2020-02-07 11:28:47 INFO  Similarity:292 - Similarity threshold updated:0.4076258887299286 Count:4748
+2020-02-07 11:28:47 INFO  Similarity:292 - Similarity threshold updated:0.4066258887299286 Count:4748
+2020-02-07 11:28:47 INFO  Similarity:292 - Similarity threshold updated:0.4056258887299286 Count:4748
+2020-02-07 11:28:47 INFO  Similarity:292 - Similarity threshold updated:0.4046258887299286 Count:4748
+2020-02-07 11:28:47 INFO  Similarity:292 - Similarity threshold updated:0.4036258887299286 Count:8180
+2020-02-07 11:28:47 INFO  Similarity:294 - Similarity threshold updated:0.4036258887299286 Count:8180
+2020-02-07 11:28:47 INFO  Hysteresis:116 - Chunk 0 entries are categorized and written to disk at 
+2020-02-07 11:28:47 INFO  AdaptiveGridFTPClient:123 -  Running MC with :2 channels.
+2020-02-07 11:28:47 INFO  AdaptiveGridFTPClient:125 - Chunk :HUGE cc:2 p:1 ppq:0
+2020-02-07 11:28:47 INFO  GridFTPClient:247 - Transferring chunk HUGE params:Concurrency:2	Paralellism:1	Pipelining:0 33554432 file count:25 size:512000.0
+2020-02-07 11:34:14 INFO  ChannelModule:107 - source  = ftp://129.114.63.44//scratch/01814/earslan/1G/
+2020-02-07 11:34:14 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/oasis/scratch/comet/earslan/temp_project/test/
+2020-02-07 11:34:14 INFO  ChannelModule:141 - rtt = 0.03 ms
+2020-02-07 11:34:14 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-07 11:34:14 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-07 11:34:14 INFO  ChannelModule:150 - cc = 10
+2020-02-07 11:34:14 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-07 11:34:14 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-07 11:34:19 INFO  ChannelModule:107 - source  = ftp://129.114.63.44//scratch/01814/earslan/1G/
+2020-02-07 11:34:19 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/oasis/scratch/comet/earslan/temp_project/test/
+2020-02-07 11:34:19 INFO  ChannelModule:141 - rtt = 0.03 ms
+2020-02-07 11:34:19 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-07 11:34:19 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-07 11:34:19 INFO  ChannelModule:150 - cc = 10
+2020-02-07 11:34:19 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-07 11:34:19 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-07 11:34:34 INFO  ChannelModule:107 - source  = ftp://129.114.63.44//scratch/01814/earslan/1G/
+2020-02-07 11:34:34 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/oasis/scratch/comet/earslan/temp_project/test/
+2020-02-07 11:34:34 INFO  ChannelModule:141 - rtt = 0.03 ms
+2020-02-07 11:34:34 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-07 11:34:34 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-07 11:34:34 INFO  ChannelModule:150 - cc = 10
+2020-02-07 11:34:34 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-07 11:34:34 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-07 11:35:38 INFO  ChannelModule:107 - source  = ftp://129.114.63.44//scratch/01814/earslan/1G/
+2020-02-07 11:35:38 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/oasis/scratch/comet/earslan/temp_project/test/
+2020-02-07 11:35:38 INFO  ChannelModule:141 - rtt = 0.03 ms
+2020-02-07 11:35:38 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-07 11:35:38 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-07 11:35:38 INFO  ChannelModule:150 - cc = 10
+2020-02-07 11:35:38 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-07 11:35:38 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-07 11:37:20 INFO  ChannelModule:107 - source  = ftp://129.114.63.44:50505/scratch/01814/earslan/1G/
+2020-02-07 11:37:20 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/oasis/scratch/comet/earslan/temp_project/test/
+2020-02-07 11:37:20 INFO  ChannelModule:141 - rtt = 0.03 ms
+2020-02-07 11:37:20 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-07 11:37:20 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-07 11:37:20 INFO  ChannelModule:150 - cc = 10
+2020-02-07 11:37:20 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-07 11:37:20 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-07 11:40:56 INFO  ChannelModule:107 - source  = ftp://129.114.63.44:50505/scratch/01814/earslan/1G/
+2020-02-07 11:40:56 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/oasis/scratch/comet/earslan/temp_project/test/
+2020-02-07 11:40:56 INFO  ChannelModule:141 - rtt = 0.03 ms
+2020-02-07 11:40:56 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-07 11:40:56 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-07 11:40:56 INFO  ChannelModule:150 - cc = 10
+2020-02-07 11:40:56 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-07 11:40:56 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-11 18:24:07 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/scratch/01814/earslan/1G/
+2020-02-11 18:24:07 INFO  ChannelModule:107 - source  = ftp://192.170.227.252:50505/local-scratch/earslan/20G/
+2020-02-11 18:24:07 INFO  ChannelModule:141 - rtt = 0.046 ms
+2020-02-11 18:24:07 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-11 18:24:07 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-11 18:24:07 INFO  ChannelModule:150 - cc = 10
+2020-02-11 18:24:07 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-11 18:24:07 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-11 18:24:08 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.225 data size:100 GB
+2020-02-11 18:24:08 INFO  Utils:131 - Chunk 0:	files:5	 avg:20 GB 	 total:100 GB Density:HUGE
+2020-02-11 18:24:09 INFO  Similarity:414 - Checking new entry with 4094 elements
+2020-02-11 18:24:09 INFO  Similarity:414 - Checking new entry with 2574 elements
+2020-02-11 18:24:09 INFO  Similarity:414 - Checking new entry with 11312 elements
+2020-02-11 18:24:09 INFO  Similarity:414 - Checking new entry with 2671 elements
+2020-02-11 18:24:09 INFO  Similarity:414 - Checking new entry with 4659 elements
+2020-02-11 18:24:09 INFO  Similarity:414 - Checking new entry with 9781 elements
+2020-02-11 18:24:09 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-11 18:24:09 INFO  Similarity:414 - Checking new entry with 2349 elements
+2020-02-11 18:24:09 INFO  Similarity:414 - Checking new entry with 4299 elements
+2020-02-11 18:24:09 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-11 18:24:09 INFO  Similarity:414 - Checking new entry with 4314 elements
+2020-02-11 18:24:09 INFO  Similarity:414 - Checking new entry with 4961 elements
+2020-02-11 18:24:09 INFO  Similarity:278 - Similarity calcualtions:0.9499395480202961 Entries:12
+2020-02-11 18:24:09 INFO  Similarity:292 - Similarity threshold updated:0.9489395480202961 Count:4748
+2020-02-11 18:24:09 INFO  Similarity:292 - Similarity threshold updated:0.9479395480202961 Count:4748
+2020-02-11 18:24:09 INFO  Similarity:292 - Similarity threshold updated:0.9469395480202961 Count:4748
+2020-02-11 18:24:09 INFO  Similarity:292 - Similarity threshold updated:0.9459395480202961 Count:5378
+2020-02-11 18:24:09 INFO  Similarity:292 - Similarity threshold updated:0.9449395480202961 Count:8180
+2020-02-11 18:24:09 INFO  Similarity:294 - Similarity threshold updated:0.9449395480202961 Count:8180
+2020-02-11 18:24:09 INFO  Hysteresis:116 - Chunk 0 entries are categorized and written to disk at 
+2020-02-11 18:24:09 INFO  AdaptiveGridFTPClient:123 -  Running MC with :2 channels.
+2020-02-11 18:24:09 INFO  AdaptiveGridFTPClient:125 - Chunk :HUGE cc:2 p:2 ppq:0
+2020-02-11 18:24:09 INFO  GridFTPClient:247 - Transferring chunk HUGE params:Concurrency:2	Paralellism:2	Pipelining:0 33554432 file count:5 size:102400.0
+2020-02-11 18:25:31 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/oasis/scratch/comet/earslan/temp_project/test/
+2020-02-11 18:25:31 INFO  ChannelModule:107 - source  = ftp://192.170.227.252:50505/local-scratch/earslan/20G/
+2020-02-11 18:25:31 INFO  ChannelModule:141 - rtt = 0.046 ms
+2020-02-11 18:25:31 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-11 18:25:31 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-11 18:25:31 INFO  ChannelModule:150 - cc = 10
+2020-02-11 18:25:31 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-11 18:25:31 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-11 18:25:31 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.225 data size:100 GB
+2020-02-11 18:25:31 INFO  Utils:131 - Chunk 0:	files:5	 avg:20 GB 	 total:100 GB Density:HUGE
+2020-02-11 18:25:33 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/oasis/scratch/comet/earslan/temp_project/test/
+2020-02-11 18:25:33 INFO  ChannelModule:107 - source  = ftp://192.170.227.252:50505/local-scratch/earslan/20G/
+2020-02-11 18:25:33 INFO  ChannelModule:141 - rtt = 0.046 ms
+2020-02-11 18:25:33 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-11 18:25:33 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-11 18:25:33 INFO  ChannelModule:150 - cc = 10
+2020-02-11 18:25:33 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-11 18:25:33 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-11 18:25:34 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.224 data size:100 GB
+2020-02-11 18:25:34 INFO  Utils:131 - Chunk 0:	files:5	 avg:20 GB 	 total:100 GB Density:HUGE
+2020-02-11 18:25:34 INFO  Similarity:414 - Checking new entry with 4094 elements
+2020-02-11 18:25:34 INFO  Similarity:414 - Checking new entry with 2574 elements
+2020-02-11 18:25:34 INFO  Similarity:414 - Checking new entry with 11312 elements
+2020-02-11 18:25:34 INFO  Similarity:414 - Checking new entry with 2671 elements
+2020-02-11 18:25:34 INFO  Similarity:414 - Checking new entry with 4659 elements
+2020-02-11 18:25:34 INFO  Similarity:414 - Checking new entry with 9781 elements
+2020-02-11 18:25:34 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-11 18:25:34 INFO  Similarity:414 - Checking new entry with 2349 elements
+2020-02-11 18:25:34 INFO  Similarity:414 - Checking new entry with 4299 elements
+2020-02-11 18:25:34 INFO  Similarity:414 - Checking new entry with 1728 elements
+2020-02-11 18:25:34 INFO  Similarity:414 - Checking new entry with 4314 elements
+2020-02-11 18:25:34 INFO  Similarity:414 - Checking new entry with 4961 elements
+2020-02-11 18:25:34 INFO  Similarity:278 - Similarity calcualtions:0.9499395480202961 Entries:12
+2020-02-11 18:25:34 INFO  Similarity:292 - Similarity threshold updated:0.9489395480202961 Count:4748
+2020-02-11 18:25:34 INFO  Similarity:292 - Similarity threshold updated:0.9479395480202961 Count:4748
+2020-02-11 18:25:34 INFO  Similarity:292 - Similarity threshold updated:0.9469395480202961 Count:4748
+2020-02-11 18:25:34 INFO  Similarity:292 - Similarity threshold updated:0.9459395480202961 Count:5378
+2020-02-11 18:25:34 INFO  Similarity:292 - Similarity threshold updated:0.9449395480202961 Count:8180
+2020-02-11 18:25:34 INFO  Similarity:294 - Similarity threshold updated:0.9449395480202961 Count:8180
+2020-02-11 18:25:34 INFO  Hysteresis:116 - Chunk 0 entries are categorized and written to disk at 
+2020-02-11 18:25:34 INFO  AdaptiveGridFTPClient:123 -  Running MC with :2 channels.
+2020-02-11 18:25:34 INFO  AdaptiveGridFTPClient:125 - Chunk :HUGE cc:2 p:2 ppq:0
+2020-02-11 18:25:34 INFO  GridFTPClient:247 - Transferring chunk HUGE params:Concurrency:2	Paralellism:2	Pipelining:0 33554432 file count:5 size:102400.0
+2020-02-11 19:12:20 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/oasis/scratch/comet/earslan/temp_project/test/
+2020-02-11 19:12:20 INFO  ChannelModule:107 - source  = ftp://192.170.227.252:50505/local-scratch/earslan/20G/
+2020-02-11 19:12:20 INFO  ChannelModule:141 - rtt = 0.046 ms
+2020-02-11 19:12:20 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-11 19:12:20 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-11 19:12:20 INFO  ChannelModule:150 - cc = 10
+2020-02-11 19:12:20 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-11 19:12:20 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-11 19:12:20 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.225 data size:100 GB
+2020-02-11 19:12:20 INFO  Utils:131 - Chunk 0:	files:5	 avg:20 GB 	 total:100 GB Density:HUGE
+2020-02-11 19:13:09 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/oasis/scratch/comet/earslan/temp_project/test/
+2020-02-11 19:13:09 INFO  ChannelModule:107 - source  = ftp://192.170.227.252:50505/local-scratch/earslan/20G/
+2020-02-11 19:13:09 INFO  ChannelModule:141 - rtt = 0.046 ms
+2020-02-11 19:13:09 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-11 19:13:09 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-11 19:13:09 INFO  ChannelModule:150 - cc = 10
+2020-02-11 19:13:09 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-11 19:13:09 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-11 19:13:10 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.223 data size:100 GB
+2020-02-11 19:13:10 INFO  Utils:131 - Chunk 0:	files:5	 avg:20 GB 	 total:100 GB Density:HUGE
+2020-02-11 19:13:10 INFO  Similarity:328 - Checking new entry with 4094 elements
+2020-02-11 19:13:10 INFO  Similarity:328 - Checking new entry with 2574 elements
+2020-02-11 19:13:10 INFO  Similarity:328 - Checking new entry with 11312 elements
+2020-02-11 19:13:10 INFO  Similarity:328 - Checking new entry with 2671 elements
+2020-02-11 19:13:10 INFO  Similarity:328 - Checking new entry with 4659 elements
+2020-02-11 19:13:10 INFO  Similarity:328 - Checking new entry with 9781 elements
+2020-02-11 19:13:10 INFO  Similarity:328 - Checking new entry with 1728 elements
+2020-02-11 19:13:10 INFO  Similarity:328 - Checking new entry with 2349 elements
+2020-02-11 19:13:10 INFO  Similarity:328 - Checking new entry with 4299 elements
+2020-02-11 19:13:10 INFO  Similarity:328 - Checking new entry with 1728 elements
+2020-02-11 19:13:10 INFO  Similarity:328 - Checking new entry with 4314 elements
+2020-02-11 19:13:10 INFO  Similarity:328 - Checking new entry with 4961 elements
+2020-02-11 19:13:10 INFO  Similarity:192 - Similarity calculation:0.9991009434345902 Entries:12
+2020-02-11 19:13:10 INFO  Similarity:206 - Similarity threshold updated:0.9981009434345902 Count:47
+2020-02-11 19:13:10 INFO  Similarity:206 - Similarity threshold updated:0.9971009434345902 Count:2158
+2020-02-11 19:13:10 INFO  Similarity:206 - Similarity threshold updated:0.9961009434345902 Count:9139
+2020-02-11 19:13:10 INFO  Similarity:208 - Similarity threshold updated:0.9961009434345902 Count:9139
+2020-02-11 19:13:10 INFO  Hysteresis:116 - Chunk 0 entries are categorized and written to disk at 
+2020-02-11 19:13:10 INFO  AdaptiveGridFTPClient:123 -  Running MC with :2 channels.
+2020-02-11 19:13:10 INFO  AdaptiveGridFTPClient:125 - Chunk :HUGE cc:2 p:2 ppq:0
+2020-02-11 19:13:10 INFO  GridFTPClient:247 - Transferring chunk HUGE params:Concurrency:2	Paralellism:2	Pipelining:0 33554432 file count:5 size:102400.0
+2020-02-11 19:23:01 INFO  AdaptiveGridFTPClient:138 - MULTICHUNK	fileClusters	4	maxCC	10 Throughput:1455.9211172881355
+2020-02-11 19:25:20 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/oasis/scratch/comet/earslan/temp_project/test/
+2020-02-11 19:25:20 INFO  ChannelModule:107 - source  = ftp://192.170.227.252:50505/local-scratch/earslan/20G/
+2020-02-11 19:25:20 INFO  ChannelModule:141 - rtt = 0.046 ms
+2020-02-11 19:25:20 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-11 19:25:20 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-11 19:25:20 INFO  ChannelModule:150 - cc = 10
+2020-02-11 19:25:20 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-11 19:25:20 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-11 19:25:21 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.225 data size:100 GB
+2020-02-11 19:25:21 INFO  Utils:131 - Chunk 0:	files:5	 avg:20 GB 	 total:100 GB Density:HUGE
+2020-02-11 19:25:22 INFO  Similarity:328 - Checking new entry with 4094 elements
+2020-02-11 19:25:22 INFO  Similarity:328 - Checking new entry with 2574 elements
+2020-02-11 19:25:22 INFO  Similarity:328 - Checking new entry with 11312 elements
+2020-02-11 19:25:22 INFO  Similarity:328 - Checking new entry with 2671 elements
+2020-02-11 19:25:22 INFO  Similarity:328 - Checking new entry with 4659 elements
+2020-02-11 19:25:22 INFO  Similarity:328 - Checking new entry with 9781 elements
+2020-02-11 19:25:22 INFO  Similarity:328 - Checking new entry with 1728 elements
+2020-02-11 19:25:22 INFO  Similarity:328 - Checking new entry with 2349 elements
+2020-02-11 19:25:22 INFO  Similarity:328 - Checking new entry with 4299 elements
+2020-02-11 19:25:22 INFO  Similarity:328 - Checking new entry with 1728 elements
+2020-02-11 19:25:22 INFO  Similarity:328 - Checking new entry with 4314 elements
+2020-02-11 19:25:22 INFO  Similarity:328 - Checking new entry with 4961 elements
+2020-02-11 19:25:22 INFO  Similarity:192 - Similarity calculation:0.9991009434345902 Entries:12
+2020-02-11 19:25:22 INFO  Similarity:206 - Similarity threshold updated:0.9981009434345902 Count:47
+2020-02-11 19:25:22 INFO  Similarity:206 - Similarity threshold updated:0.9971009434345902 Count:2158
+2020-02-11 19:25:22 INFO  Similarity:206 - Similarity threshold updated:0.9961009434345902 Count:9139
+2020-02-11 19:25:22 INFO  Similarity:208 - Similarity threshold updated:0.9961009434345902 Count:9139
+2020-02-11 19:25:22 INFO  Hysteresis:116 - Chunk 0 entries are categorized and written to disk at 
+2020-02-11 19:25:22 INFO  AdaptiveGridFTPClient:123 -  Running MC with :2 channels.
+2020-02-11 19:25:22 INFO  AdaptiveGridFTPClient:125 - Chunk :HUGE cc:2 p:2 ppq:0
+2020-02-11 19:25:22 INFO  GridFTPClient:247 - Transferring chunk HUGE params:Concurrency:2	Paralellism:2	Pipelining:0 33554432 file count:5 size:102400.0
+2020-02-11 19:29:13 INFO  AdaptiveGridFTPClient:138 - MULTICHUNK	fileClusters	4	maxCC	10 Throughput:3718.5864034632036
+2020-02-11 19:29:38 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/oasis/scratch/comet/earslan/temp_project/test/
+2020-02-11 19:29:38 INFO  ChannelModule:107 - source  = ftp://192.170.227.252:50505/local-scratch/earslan/20G/
+2020-02-11 19:29:38 INFO  ChannelModule:141 - rtt = 0.046 ms
+2020-02-11 19:29:38 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-11 19:29:38 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-11 19:29:38 INFO  ChannelModule:150 - cc = 10
+2020-02-11 19:29:38 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-11 19:29:38 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-11 19:29:39 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.231 data size:100 GB
+2020-02-11 19:29:39 INFO  Utils:131 - Chunk 0:	files:5	 avg:20 GB 	 total:100 GB Density:HUGE
+2020-02-11 19:29:39 INFO  Similarity:328 - Checking new entry with 4094 elements
+2020-02-11 19:29:39 INFO  Similarity:328 - Checking new entry with 2574 elements
+2020-02-11 19:29:39 INFO  Similarity:328 - Checking new entry with 11312 elements
+2020-02-11 19:29:39 INFO  Similarity:328 - Checking new entry with 2671 elements
+2020-02-11 19:29:39 INFO  Similarity:328 - Checking new entry with 4659 elements
+2020-02-11 19:29:39 INFO  Similarity:328 - Checking new entry with 9781 elements
+2020-02-11 19:29:39 INFO  Similarity:328 - Checking new entry with 1728 elements
+2020-02-11 19:29:39 INFO  Similarity:328 - Checking new entry with 2349 elements
+2020-02-11 19:29:39 INFO  Similarity:328 - Checking new entry with 4299 elements
+2020-02-11 19:29:39 INFO  Similarity:328 - Checking new entry with 1728 elements
+2020-02-11 19:29:39 INFO  Similarity:328 - Checking new entry with 4314 elements
+2020-02-11 19:29:39 INFO  Similarity:328 - Checking new entry with 4961 elements
+2020-02-11 19:29:39 INFO  Similarity:192 - Similarity calculation:0.9991009434345902 Entries:12
+2020-02-11 19:29:39 INFO  Similarity:206 - Similarity threshold updated:0.9981009434345902 Count:47
+2020-02-11 19:29:39 INFO  Similarity:206 - Similarity threshold updated:0.9971009434345902 Count:2158
+2020-02-11 19:29:39 INFO  Similarity:206 - Similarity threshold updated:0.9961009434345902 Count:9139
+2020-02-11 19:29:39 INFO  Similarity:208 - Similarity threshold updated:0.9961009434345902 Count:9139
+2020-02-11 19:29:39 INFO  Hysteresis:116 - Chunk 0 entries are categorized and written to disk at 
+2020-02-11 19:29:40 INFO  AdaptiveGridFTPClient:123 -  Running MC with :2 channels.
+2020-02-11 19:29:40 INFO  AdaptiveGridFTPClient:125 - Chunk :HUGE cc:2 p:2 ppq:0
+2020-02-11 19:29:40 INFO  GridFTPClient:247 - Transferring chunk HUGE params:Concurrency:2	Paralellism:2	Pipelining:0 33554432 file count:5 size:102400.0
+2020-02-11 19:36:36 INFO  AdaptiveGridFTPClient:138 - MULTICHUNK	fileClusters	4	maxCC	10 Throughput:2064.888123076923
+2020-02-11 19:36:43 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/oasis/scratch/comet/earslan/temp_project/test/
+2020-02-11 19:36:43 INFO  ChannelModule:107 - source  = ftp://192.170.227.252:50505/local-scratch/earslan/20G/
+2020-02-11 19:36:43 INFO  ChannelModule:141 - rtt = 0.046 ms
+2020-02-11 19:36:43 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-11 19:36:43 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-11 19:36:43 INFO  ChannelModule:150 - cc = 10
+2020-02-11 19:36:43 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-11 19:36:43 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-11 19:36:44 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.282 data size:100 GB
+2020-02-11 19:36:44 INFO  Utils:131 - Chunk 0:	files:5	 avg:20 GB 	 total:100 GB Density:HUGE
+2020-02-11 19:36:44 INFO  Similarity:328 - Checking new entry with 4094 elements
+2020-02-11 19:36:44 INFO  Similarity:328 - Checking new entry with 2574 elements
+2020-02-11 19:36:44 INFO  Similarity:328 - Checking new entry with 11312 elements
+2020-02-11 19:36:44 INFO  Similarity:328 - Checking new entry with 2671 elements
+2020-02-11 19:36:44 INFO  Similarity:328 - Checking new entry with 4659 elements
+2020-02-11 19:36:44 INFO  Similarity:328 - Checking new entry with 9781 elements
+2020-02-11 19:36:44 INFO  Similarity:328 - Checking new entry with 1728 elements
+2020-02-11 19:36:44 INFO  Similarity:328 - Checking new entry with 2349 elements
+2020-02-11 19:36:44 INFO  Similarity:328 - Checking new entry with 4299 elements
+2020-02-11 19:36:44 INFO  Similarity:328 - Checking new entry with 1728 elements
+2020-02-11 19:36:44 INFO  Similarity:328 - Checking new entry with 4314 elements
+2020-02-11 19:36:45 INFO  Similarity:328 - Checking new entry with 4961 elements
+2020-02-11 19:36:45 INFO  Similarity:192 - Similarity calculation:0.9991009434345902 Entries:12
+2020-02-11 19:36:45 INFO  Similarity:206 - Similarity threshold updated:0.9981009434345902 Count:47
+2020-02-11 19:36:45 INFO  Similarity:206 - Similarity threshold updated:0.9971009434345902 Count:2158
+2020-02-11 19:36:45 INFO  Similarity:206 - Similarity threshold updated:0.9961009434345902 Count:9139
+2020-02-11 19:36:45 INFO  Similarity:208 - Similarity threshold updated:0.9961009434345902 Count:9139
+2020-02-11 19:36:45 INFO  Hysteresis:116 - Chunk 0 entries are categorized and written to disk at 
+2020-02-11 19:36:45 INFO  AdaptiveGridFTPClient:123 -  Running MC with :2 channels.
+2020-02-11 19:36:45 INFO  AdaptiveGridFTPClient:125 - Chunk :HUGE cc:2 p:2 ppq:0
+2020-02-11 19:36:45 INFO  GridFTPClient:247 - Transferring chunk HUGE params:Concurrency:2	Paralellism:2	Pipelining:0 33554432 file count:5 size:102400.0
+2020-02-11 19:40:03 INFO  AdaptiveGridFTPClient:138 - MULTICHUNK	fileClusters	4	maxCC	10 Throughput:4338.350804040404
+2020-02-11 19:40:25 INFO  ChannelModule:116 - destination = ftp://198.202.113.253:50505/oasis/scratch/comet/earslan/temp_project/test/
+2020-02-11 19:40:25 INFO  ChannelModule:107 - source  = ftp://192.170.227.252:50505/local-scratch/earslan/20G/
+2020-02-11 19:40:25 INFO  ChannelModule:141 - rtt = 0.046 ms
+2020-02-11 19:40:25 INFO  ChannelModule:133 - bandwidth = 1.0E10 GB
+2020-02-11 19:40:25 INFO  ChannelModule:159 - bs = 3.3554432E7
+2020-02-11 19:40:25 INFO  ChannelModule:150 - cc = 10
+2020-02-11 19:40:25 INFO  ChannelModule:187 - Use hysteresis based approach
+2020-02-11 19:40:25 INFO  ChannelModule:217 - Online modelling/tuning enabled.
+2020-02-11 19:40:26 INFO  AdaptiveGridFTPClient:81 - file listing completed at:0.233 data size:100 GB
+2020-02-11 19:40:26 INFO  Utils:131 - Chunk 0:	files:5	 avg:20 GB 	 total:100 GB Density:HUGE
+2020-02-11 19:40:26 INFO  Similarity:328 - Checking new entry with 4094 elements
+2020-02-11 19:40:26 INFO  Similarity:328 - Checking new entry with 2574 elements
+2020-02-11 19:40:26 INFO  Similarity:328 - Checking new entry with 11312 elements
+2020-02-11 19:40:26 INFO  Similarity:328 - Checking new entry with 2671 elements
+2020-02-11 19:40:26 INFO  Similarity:328 - Checking new entry with 4659 elements
+2020-02-11 19:40:26 INFO  Similarity:328 - Checking new entry with 9781 elements
+2020-02-11 19:40:26 INFO  Similarity:328 - Checking new entry with 1728 elements
+2020-02-11 19:40:26 INFO  Similarity:328 - Checking new entry with 2349 elements
+2020-02-11 19:40:26 INFO  Similarity:328 - Checking new entry with 4299 elements
+2020-02-11 19:40:26 INFO  Similarity:328 - Checking new entry with 1728 elements
+2020-02-11 19:40:26 INFO  Similarity:328 - Checking new entry with 4314 elements
+2020-02-11 19:40:26 INFO  Similarity:328 - Checking new entry with 4961 elements
+2020-02-11 19:40:26 INFO  Similarity:192 - Similarity calculation:0.9991009434345902 Entries:12
+2020-02-11 19:40:26 INFO  Similarity:206 - Similarity threshold updated:0.9981009434345902 Count:47
+2020-02-11 19:40:26 INFO  Similarity:206 - Similarity threshold updated:0.9971009434345902 Count:2158
+2020-02-11 19:40:26 INFO  Similarity:206 - Similarity threshold updated:0.9961009434345902 Count:9139
+2020-02-11 19:40:26 INFO  Similarity:208 - Similarity threshold updated:0.9961009434345902 Count:9139
+2020-02-11 19:40:26 INFO  Hysteresis:116 - Chunk 0 entries are categorized and written to disk at 
+2020-02-11 19:40:26 INFO  AdaptiveGridFTPClient:123 -  Running MC with :2 channels.
+2020-02-11 19:40:26 INFO  AdaptiveGridFTPClient:125 - Chunk :HUGE cc:2 p:2 ppq:0
+2020-02-11 19:40:26 INFO  GridFTPClient:247 - Transferring chunk HUGE params:Concurrency:2	Paralellism:2	Pipelining:0 33554432 file count:5 size:102400.0
+2020-02-11 19:47:43 INFO  AdaptiveGridFTPClient:138 - MULTICHUNK	fileClusters	4	maxCC	10 Throughput:1965.660089702517

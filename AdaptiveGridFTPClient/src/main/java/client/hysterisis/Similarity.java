@@ -130,94 +130,7 @@ public class Similarity {
     return entries;
   }
 
-
-  static public void normalizeDataset(List<Entry> entries) {
-    double[] sumSpecVector = null;
-    for (Entry entry : entries) {
-      if (sumSpecVector == null) {
-        sumSpecVector = new double[entry.specVector.size()];
-      }
-      for (int i = 0; i < sumSpecVector.length; i++) {
-        sumSpecVector[i] += entry.specVector.get(i);
-      }
-    }
-
-    Similarity.avgAttributes = new double[sumSpecVector.length];
-    for (int i = 0; i < Similarity.avgAttributes.length; i++) {
-      Similarity.avgAttributes[i] = 0.0;
-    }
-    System.out.println("Average attributes");
-    for (int i = 0; i < sumSpecVector.length; i++) {
-      Similarity.avgAttributes[i] = sumSpecVector[i] / entries.size();
-      round(Similarity.avgAttributes[i], 3);
-      System.out.print(Similarity.avgAttributes[i] + "*");
-    }
-    System.out.println();
-    Similarity.variance = new double[sumSpecVector.length];
-    for (int i = 0; i < Similarity.variance.length; i++) {
-      Similarity.variance[i] = 0.0;
-    }
-    for (Entry e : entries) {
-      for (int i = 0; i < e.specVector.size(); i++) {
-        Similarity.variance[i] += Math.pow(e.specVector.get(i) - Similarity.avgAttributes[i], 2);
-      }
-    }
-    System.out.println("Variance attributes");
-    for (int i = 0; i < Similarity.variance.length; i++) {
-      Similarity.variance[i] = Math.sqrt(Similarity.variance[i] / entries.size());
-      System.out.print(Similarity.variance[i] + "*");
-    }
-    System.out.println();
-    for (Entry e : entries) {
-      for (int i = 0; i < e.specVector.size(); i++) {
-        //double newValue = (e.specVector.get(i)-Similarity.avgAttributes[i]);
-        double newValue = (e.specVector.get(i) / sumSpecVector[i]);
-        //if(Similarity.variance[i] != 0 )
-        //	newValue/= Similarity.variance[i];
-        e.specVector.set(i, newValue);
-
-      }
-    }
-  }
-
-
-  static public void normalizeDataset2(List<List<Entry>> entries) {
-    minSpecValues = entries.size() == 0 ? null : new double[entries.get(0).get(0).specVector.size()];
-    maxSpecValues = entries.size() == 0 ? null : new double[entries.get(0).get(0).specVector.size()];
-    Arrays.fill(minSpecValues, Double.POSITIVE_INFINITY);
-    Arrays.fill(maxSpecValues, Double.NEGATIVE_INFINITY);
-    for (List<Entry> entryList : entries) {
-      for (Entry entry : entryList) {
-        for (int i = 0; i < minSpecValues.length; i++) {
-          if (entry.specVector.get(i) < minSpecValues[i]) {
-            minSpecValues[i] = entry.specVector.get(i);
-          }
-          if (entry.specVector.get(i) > maxSpecValues[i]) {
-            maxSpecValues[i] = entry.specVector.get(i);
-          }
-        }
-      }
-    }
-
-    for (int i = 0; i < minSpecValues.length; i++) {
-      LOG.info("Spec " + i + " Min:" + minSpecValues[i] + "Max:" + maxSpecValues[i]);
-    }
-
-    for (List<Entry> entryList : entries) {
-      for (Entry e : entryList) {
-        for (int i = 0; i < e.specVector.size(); i++) {
-          if (maxSpecValues[i] == minSpecValues[i]) {
-            e.specVector.set(i, Math.abs(e.specVector.get(i) - Similarity.minSpecValues[i]));
-          } else {
-            double newValue = (e.specVector.get(i) - minSpecValues[i]) / (maxSpecValues[i] - minSpecValues[i]);
-            e.specVector.set(i, newValue);
-          }
-        }
-      }
-    }
-  }
-
-  static public void normalizeDataset3(List<List<Entry>> entries, List<FileCluster> chunks, Entry transferTask) {
+  static public double[] normalizeDataset(List<List<Entry>> entries) {
     double[] maxValues = entries.size() == 0 ? null : new double[entries.get(0).get(0).specVector.size()];
     Arrays.fill(maxValues, Double.NEGATIVE_INFINITY);
     for (List<Entry> entryList : entries) {
@@ -237,24 +150,25 @@ public class Similarity {
 
     for (List<Entry> entryList : entries) {
       for (Entry e : entryList) {
-
         for (int i = 0; i < e.specVector.size(); i++) {
           double newValue = e.specVector.get(i) * ratios[i];
           e.specVector.set(i, newValue);
         }
       }
     }
+    return maxValues;
+  }
 
-    for (int chunkNumber = 0; chunkNumber < chunks.size(); chunkNumber++) {
-      //Entry targetEntry = chunks.get(chunkNumber).entry;
-      //Normalize values of target entry
-      for (int i = 0; i < transferTask.specVector.size(); i++) {
-        double newValue = transferTask.specVector.get(i) * ratios[i];
-        transferTask.specVector.set(i, newValue);
-      }
+  static public void normalizeEntry(double[] maxValues, Entry entry) {
+    double[] ratios = new double[maxValues.length];
+    for (int i = 0; i < maxValues.length; i++) {
+      ratios[i] = 100 / maxValues[i];
     }
-
-
+    //Normalize target transfer
+    for (int i = 0; i < entry.specVector.size(); i++) {
+      double newValue = entry.specVector.get(i) * ratios[i];
+      entry.specVector.set(i, newValue);
+    }
   }
 
   public static double round(double value, int places) {
@@ -275,7 +189,7 @@ public class Similarity {
     Similarity similarity = new Similarity();
     similarity.measureCosineSimilarity(targetEntry, entries);
     List<Entry> mostSimilarEntries = new LinkedList<Entry>();
-    LOG.info("Similarity calcualtions:"+similarityThreshold+" Entries:"+entries.size());
+    LOG.info("Similarity calculation:"+similarityThreshold+" Entries:"+entries.size());
     int counter = 0;
     while (counter < 6000) {
       counter = 0;
@@ -414,15 +328,6 @@ public class Similarity {
       LOG.info("Checking new entry with " +entryList.size() + " elements");
       for (Entry e : entryList) {
         double similarityValue;
-
-				/*
-      target.specVector.add(1.0);
-	    if(target.getTestbed() != null && target.getTestbed().compareTo(e.getTestbed()) == 0)
-				e.specVector.add(1.0);
-			else
-				e.specVector.add(0.0);
-				 */
-
         //Cosine Similarity
         double squareOne = 0, squareTwo = 0, multiplication = 0;
 

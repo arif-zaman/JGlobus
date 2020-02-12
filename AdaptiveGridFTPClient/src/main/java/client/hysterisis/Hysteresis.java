@@ -26,7 +26,7 @@ public class Hysteresis {
     double []resultValues = new double[4];
     try {
       double sampleThroughputinMb = sampleThroughput / Math.pow(10, 6);
-      ProcessBuilder pb = new ProcessBuilder("python2", "src/main/python/optimizer.py",
+      ProcessBuilder pb = new ProcessBuilder("python2.7", "src/main/python/optimizer.py",
           "-f", "chunk_"+chunk.getDensity()+".txt",
           "-c", "" + tunableParameters.getConcurrency(),
           "-p", "" + tunableParameters.getParallelism(),
@@ -96,23 +96,23 @@ public class Hysteresis {
     if (entries.isEmpty()) {  // Make sure there are log files to run hysterisis
       LOG.fatal("No input entries found to run hysterisis analysis. Exiting...");
     }
-
-    // Find out similar entries
-    int[] setCounts = new int[chunks.size()];
-
+    double[] maxValues = Similarity.normalizeDataset(entries);
     for (int chunkNumber = 0; chunkNumber < chunks.size(); chunkNumber++) {
-      transferTask.setFileCount(chunks.get(chunkNumber).getRecords().count());
-      transferTask.setFileSize((new Double(chunks.get(chunkNumber).getRecords().avgFileSize()).longValue()));
-      transferTask.calculateSpecVector();
-    }
-
-    Similarity.normalizeDataset3(entries, chunks, transferTask);
-    for (int chunkNumber = 0; chunkNumber < chunks.size(); chunkNumber++) {
-      List<Entry> similarEntries = Similarity.findSimilarEntries(entries, transferTask);
+      Entry chunkSpecs = new Entry();
+      chunkSpecs.setBandwidth(transferTask.getBandwidth());
+      chunkSpecs.setRtt(transferTask.getRtt());
+      chunkSpecs.setBDP((transferTask.getBandwidth() * transferTask.getRtt()) / 8); // In MB
+      chunkSpecs.setBufferSize(transferTask.getBufferSize());
+      chunkSpecs.setFileCount(chunks.get(chunkNumber).getRecords().count());
+      chunkSpecs.setFileSize((new Double(chunks.get(chunkNumber).getRecords().avgFileSize()).longValue()));
+      chunkSpecs.setDensity(Entry.findDensityOfList(chunkSpecs.getFileSize(), chunkSpecs.getBandwidth(),
+             transferTask.getMaxConcurrency()));
+      chunkSpecs.calculateSpecVector();
+      //chunkSpecs.getIdentity()
+      Similarity.normalizeEntry(maxValues, chunkSpecs);
+      List<Entry> similarEntries = Similarity.findSimilarEntries(entries, chunkSpecs);
       //Categorize selected entries based on log date
-      List<List<Entry>> trials = new LinkedList<>();
       Similarity.categorizeEntries(similarEntries, chunks.get(chunkNumber).getDensity().name());
-      setCounts[chunkNumber] = trials.size();
       LOG.info("Chunk "+chunkNumber + " entries are categorized and written to disk at ");
     }
   }
