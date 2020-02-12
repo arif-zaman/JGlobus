@@ -169,8 +169,8 @@ def main():
         if regression is None:
             #print "Skipped", name, size
             discarded_data_counter += 1
-        elif name.startswith("SB") or name.startswith("sg"):
-            discarded_data_counter += 1
+        #elif name.startswith("SB") or name.startswith("sg"):
+        #    discarded_data_counter += 1
         else:
             all_experiments.append(TransferExperiment(name, size, similarity, regression, degree, optimal_point, data[0,:]))
             #print "Read data point ", name, data[0,:], data
@@ -195,7 +195,6 @@ def main():
 
     #print attrs
     X = np.array(attrs, dtype=np.float)
-    print X
     bandwidth = estimate_bandwidth(X, quantile=0.2)
     ms = MeanShift(bandwidth=bandwidth, bin_seeding=True)
     ms.fit(X)
