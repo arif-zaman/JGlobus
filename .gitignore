@@ -17,4 +17,5 @@ test-output
 *.xml~
 *.csv
 *.txt
+*.log
 .DS_Store
