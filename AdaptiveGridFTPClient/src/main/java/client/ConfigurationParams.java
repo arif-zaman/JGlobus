@@ -134,11 +134,11 @@ public class ConfigurationParams {
         break;
       case "-rtt":
         if (args.length > 1) {
-          rtt = Double.parseDouble(args[1]);
+          rtt = Double.parseDouble(args[1])/1000.0;
         } else {
           LOG.fatal("-rtt requires round trip time in millisecond");
         }
-        LOG.info("rtt = " + rtt + " ms");
+        LOG.info("rtt = " + rtt + " seconds");
         break;
       case "-maxcc":
       case "-max-concurrency":
