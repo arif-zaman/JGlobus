@@ -338,10 +338,11 @@ public class GridFTPClient implements Runnable {
                     }
                     //long start = System.currentTimeMillis();
                     URI srcUri = null, dstUri = null;
+
                     try {
-                        srcUri = new URI(su.uri.getScheme(), su.uri.getUserInfo(), srcIp.getCanonicalHostName(),
+                        srcUri = new URI(su.uri.getScheme(), su.uri.getUserInfo(), srcIp.getHostAddress(),
                                 su.uri.getPort(), su.uri.getPath(), su.uri.getQuery(), su.uri.getFragment());
-                        dstUri = new URI(du.uri.getScheme(), du.uri.getUserInfo(), dstIp.getCanonicalHostName(),
+                        dstUri = new URI(du.uri.getScheme(), du.uri.getUserInfo(), dstIp.getHostAddress(),
                                 du.uri.getPort(), du.uri.getPath(), du.uri.getQuery(), du.uri.getFragment());
                     } catch (URISyntaxException e) {
                         LOG.error("Updating URI host failed:", e);
