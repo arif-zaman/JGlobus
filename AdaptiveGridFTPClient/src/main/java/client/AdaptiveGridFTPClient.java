@@ -54,7 +54,7 @@ public class AdaptiveGridFTPClient {
     transferTask.setMaxConcurrency(conf.maxConcurrency);
 
     if (gridFTPClient == null) {
-      gridFTPClient = new GridFTPClient(conf.source, conf.destination, conf.proxyFile);
+      gridFTPClient = new GridFTPClient(conf.source, conf.destination);
       gridFTPClient.start();
       gridFTPClient.waitFor();
     }
@@ -84,7 +84,6 @@ public class AdaptiveGridFTPClient {
       hysteresis = new Hysteresis();
       hysteresis.findOptimalParameters(chunks, transferTask);
     }
-
 
     int[][] estimatedParamsForChunks = new int[chunks.size()][4];
     long timeSpent = 0;

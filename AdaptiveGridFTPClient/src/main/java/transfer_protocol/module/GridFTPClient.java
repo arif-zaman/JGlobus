@@ -10,6 +10,7 @@ import client.utils.Utils;
 import com.google.common.collect.Lists;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.globus.ftp.DataChannelAuthentication;
 import org.globus.ftp.HostPort;
 import org.globus.ftp.HostPortList;
 import org.gridforum.jgss.ExtendedGSSCredential;
@@ -41,9 +42,8 @@ public class GridFTPClient implements Runnable {
 
     Thread connectionThread, transferMonitorThread;
     HostResolution sourceHostResolutionThread, destinationHostResolutionThread;
-    GSSCredential cred = null;
+    GSSCredential srcCred =null, dstCred =null, cred = null;
 
-    String proxyFile = null;
     volatile int rv = -1;
     static int perfFreq = 3;
     public boolean useDynamicScheduling = false;
@@ -51,7 +51,7 @@ public class GridFTPClient implements Runnable {
 
     private static final Log LOG = LogFactory.getLog(GridFTPClient.class);
 
-    public GridFTPClient(String source, String dest, String proxy) {
+    public GridFTPClient(String source, String dest) {
         try {
             usu = new URI(source).normalize();
             udu = new URI(dest).normalize();
@@ -59,7 +59,6 @@ public class GridFTPClient implements Runnable {
             e.printStackTrace();
             System.exit(-1);
         }
-        proxyFile = proxy;
         executor = Executors.newFixedThreadPool(30);
     }
 
@@ -80,6 +79,7 @@ public class GridFTPClient implements Runnable {
             channelPair.setPipelining(params.getPipelining());
             channelPair.setBufferSize(params.getBufferSize());
             channelPair.setPerfFreq(perfFreq);
+            channelPair.setDataChannelAuthentication(DataChannelAuthentication.NONE);
             if (!channelPair.isDataChannelReady()) {
                 if (channelPair.dc.local || !channelPair.gridftp) {
                     channelPair.setTypeAndMode('I', 'S');
@@ -105,38 +105,29 @@ public class GridFTPClient implements Runnable {
     }
 
     public void process() throws Exception {
-        String in = null;  // Used for better error messages.
 
         // Check if we were provided a proxy. If so, load it.
-        if (usu.getScheme().compareTo("gsiftp") == 0 && proxyFile != null) {
-            try {
-                File cred_file = new File(proxyFile);
-                FileInputStream fis = new FileInputStream(cred_file);
-                byte[] cred_bytes = new byte[(int) cred_file.length()];
-                fis.read(cred_bytes);
-                System.out.println("Setting parameters");
-                //GSSManager manager = ExtendedGSSManager.getInstance();
-                ExtendedGSSManager gm = (ExtendedGSSManager) ExtendedGSSManager.getInstance();
-                cred = gm.createCredential(cred_bytes,
-                        ExtendedGSSCredential.IMPEXP_OPAQUE,
-                        GSSCredential.DEFAULT_LIFETIME, null,
-                        GSSCredential.INITIATE_AND_ACCEPT);
-                fis.close();
+        if (usu.getScheme().compareTo("gsiftp") == 0) {
+            if (ConfigurationParams.proxyFile != null) {
+                cred = readCredential(ConfigurationParams.proxyFile);
+                srcCred = dstCred = cred;
+            }
+            if (ConfigurationParams.srcCred != null) {
+                srcCred = readCredential(ConfigurationParams.srcCred);
+            }
 
-            } catch (Exception e) {
-                fatal("error loading x509 proxy: " + e.getMessage());
+            if (ConfigurationParams.dstCred != null) {
+                dstCred = readCredential(ConfigurationParams.dstCred);
             }
         }
 
         // Attempt to connect to hosts.
         // TODO: Differentiate between temporary errors and fatal errors.
         try {
-            in = "src";
-            su = new FTPURI(usu, cred);
-            in = "dest";
-            du = new FTPURI(udu, cred);
+            su = new FTPURI(usu, srcCred);
+            du = new FTPURI(udu, dstCred);
         } catch (Exception e) {
-            fatal("couldn't connect to " + in + " server: " + e.getMessage());
+            fatal("couldn't connect to server: " + e.getMessage());
         }
         // Attempt to connect to hosts.
         // TODO: Differentiate between temporary errors and fatal errors.
@@ -154,6 +145,27 @@ public class GridFTPClient implements Runnable {
         }
         System.out.println("Done parameters");
         ftpClient.fileClusters = new LinkedList<>();
+    }
+
+    GSSCredential readCredential (String credPath) throws Exception {
+        GSSCredential gssCredential = null;
+        try {
+            File cred_file = new File(credPath);
+            FileInputStream fis = new FileInputStream(cred_file);
+            byte[] cred_bytes = new byte[(int) cred_file.length()];
+            fis.read(cred_bytes);
+            System.out.println("Setting parameters");
+            //GSSManager manager = ExtendedGSSManager.getInstance();
+            ExtendedGSSManager gm = (ExtendedGSSManager) ExtendedGSSManager.getInstance();
+            gssCredential = gm.createCredential(cred_bytes,
+                    ExtendedGSSCredential.IMPEXP_OPAQUE,
+                    GSSCredential.DEFAULT_LIFETIME, null,
+                    GSSCredential.INITIATE_AND_ACCEPT);
+            fis.close();
+        } catch (Exception e) {
+            fatal("error loading x509 proxy: " + e.getMessage());
+        }
+        return gssCredential;
     }
 
     private void abort() {

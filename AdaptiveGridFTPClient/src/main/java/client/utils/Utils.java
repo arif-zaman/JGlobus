@@ -259,7 +259,8 @@ public class Utils {
 
 
   // Ordering in this enum is important and has to stay as this for Utils.findDensityOfFile to perform as expected
-  public enum Density {
+  public
+  enum Density {
     SMALL, LARGE, MEDIUM, HUGE
   }
 }

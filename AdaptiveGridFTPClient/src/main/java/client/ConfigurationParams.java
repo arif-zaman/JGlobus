@@ -25,7 +25,9 @@ public class ConfigurationParams {
   boolean channelLevelDebug = false;
   int perfFreq = 3;
 
-  String proxyFile;
+  public static String proxyFile;
+  public static String srcCred;
+  public static String dstCred;
   ChannelDistributionPolicy channelDistPolicy = ChannelDistributionPolicy.ROUND_ROBIN;
   boolean useHysterisis = false;
 
@@ -119,7 +121,23 @@ public class ConfigurationParams {
         if (args.length > 1) {
           proxyFile = args[1];
         } else {
-          LOG.fatal("-spath requires spath of file/directory to be transferred");
+          LOG.fatal("-cred requires path of credential file");
+        }
+        LOG.info("proxyFile = " + proxyFile);
+        break;
+      case "-sc":
+        if (args.length > 1) {
+          srcCred = args[1];
+        } else {
+          LOG.fatal("-cred requires path of credential file");
+        }
+        LOG.info("sc-cred = " + srcCred);
+        break;
+      case "-dc":
+        if (args.length > 1) {
+          dstCred = args[1];
+        } else {
+          LOG.fatal("-cred requires path of credential file");
         }
         LOG.info("proxyFile = " + proxyFile);
         break;

@@ -575,6 +575,14 @@ public class ChannelModule {
       sc.execute("OPTS RETR Parallelism=" + p + "," + p + "," + p + ";");
     }
 
+    void setDataChannelAuthentication(DataChannelAuthentication type) throws Exception {
+      if (!rc.gridftp) {
+        return;
+      }
+      Command cmd = new Command("DCAU", type.toFtpCmdArgument());
+      sc.execute(cmd);
+      dc.execute(cmd);
+    }
 
     public int getPipelining() {
       return pipelining;
@@ -812,7 +820,8 @@ public class ChannelModule {
       }
 
       if (r != null && (!Reply.isPositivePreliminary(r)) ) {
-        error = new Exception("failed to start " + r.getCode() + ":" + r.getCategory() + ":" + r.getMessage());
+        error = new Exception("failed to start " + r.getCode() + ":" + r.getCategory() + ":" + r.getMessage() +
+                              " host:" + cc.fc.getHost());
       }
       while (other.error == null) {
         r = cc.read();

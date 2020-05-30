@@ -16,7 +16,6 @@ import java.util.Vector;
  * @author earslan
  */
 public class Entry {
-  //public static enum Density{SMALL, MEDIUM, LARGE, HUGE} ;
 
   double similarityValue;
   Vector<Double> specVector;
