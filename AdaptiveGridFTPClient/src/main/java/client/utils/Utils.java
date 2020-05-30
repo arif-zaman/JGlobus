@@ -224,7 +224,6 @@ public class Utils {
         double propChunkWeight = (chunkWeights[i] * 1.0 / totalWeight);
         concurrencyLevels[i] = Math.min(remainingChannelCount, (int) Math.floor(channelCount * propChunkWeight));
         remainingChannelCount -= concurrencyLevels[i];
-        //System.out.println("Channel "+i + "weight:" +propChunkWeight  + "got " + concurrencyLevels[i] + "channels");
       }
 
       // Since we take floor when calculating, total channels might be unassigned.

@@ -53,6 +53,8 @@ public class AdaptiveGridFTPClient {
     transferTask.setBufferSize(conf.bufferSize);
     transferTask.setMaxConcurrency(conf.maxConcurrency);
 
+    System.out.println("File size: " + transferTask.getFileSize() + " File Count:" + transferTask.getFileCount());
+
     if (gridFTPClient == null) {
       gridFTPClient = new GridFTPClient(conf.source, conf.destination);
       gridFTPClient.start();
@@ -83,6 +85,7 @@ public class AdaptiveGridFTPClient {
       // Initialize historical data analysis
       hysteresis = new Hysteresis();
       hysteresis.findOptimalParameters(chunks, transferTask);
+      GridFTPClient.executor.submit(new GridFTPClient.ModellingThread());
     }
 
     int[][] estimatedParamsForChunks = new int[chunks.size()][4];
@@ -96,7 +99,7 @@ public class AdaptiveGridFTPClient {
           chunks.forEach(chunk -> chunk.getTunableParameters().setConcurrency(
               Math.min(transferTask.getMaxConcurrency(), chunk.getRecords().count())));
         }
-        GridFTPClient.executor.submit(new GridFTPClient.ModellingThread());
+        //GridFTPClient.executor.submit(new GridFTPClient.ModellingThread());
         chunks.forEach(chunk -> gridFTPClient.runTransfer(chunk));
         break;
       default:
@@ -104,10 +107,10 @@ public class AdaptiveGridFTPClient {
         int totalChannelCount = Math.min(conf.maxConcurrency, dataset.count());
         if (conf.useHysterisis) {
           int maxConcurrency = 0;
-          for (int i = 0; i < estimatedParamsForChunks.length; i++) {
-            //fileClusters.get(i).getRecords().setTransferParameters(estimatedParamsForChunks[i]);
-            if (estimatedParamsForChunks[i][0] > maxConcurrency) {
-              maxConcurrency = estimatedParamsForChunks[i][0];
+          for (FileCluster fileCluster : chunks) {
+            fileCluster.setTunableParameters(Utils.getBestParams(fileCluster.getRecords(), conf.maximumChunks));
+            if (fileCluster.getTunableParameters().getConcurrency() > maxConcurrency) {
+              maxConcurrency = fileCluster.getTunableParameters().getConcurrency();
             }
           }
           totalChannelCount = maxConcurrency;

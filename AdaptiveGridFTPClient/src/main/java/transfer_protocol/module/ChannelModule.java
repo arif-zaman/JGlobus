@@ -465,7 +465,6 @@ public class ChannelModule {
       Reply r = null;
       try {
         r = rc.read();
-        //System.out.println("passive reply\t"+r.getMessage());
       } catch (Exception e) {
         // TODO Auto-generated catch block
         e.printStackTrace();
@@ -670,10 +669,10 @@ public class ChannelModule {
           pipeMkdir(e.dpath());
         } else {
           // Reset port if we are using FTP in stream mode, otherwise channel will be closed after first file transfer.
-          if (!gridftp && mode == 'S') {
+          /*if (!gridftp && mode == 'S') {
             HostPort hp = setPassive();
             setActive(hp);
-          }
+          }*/
           String checksum = null;
           if (enableCheckSum) {
             checksum = pipeGetCheckSum(e.fullPath());

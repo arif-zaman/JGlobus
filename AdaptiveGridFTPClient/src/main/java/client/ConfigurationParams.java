@@ -9,7 +9,7 @@ import java.io.*;
 
 public class ConfigurationParams {
   private static final Log LOG = LogFactory.getLog(ChannelModule.class);
-  public static String INPUT_DIR = "/Users/earslan/HARP/historical_data/activeFiles/";
+  public static String INPUT_DIR = "/home/earslan/JGlobus/AdaptiveGridFTPClient/";
   public static String OUTPUT_DIR = "/Users/earslan/HARP/target/";
   public static long MAXIMUM_SINGLE_FILE_SIZE = 1024 * 1024 * 1024; // 1GB
   public static double cc_rate = 0.7;
@@ -152,11 +152,11 @@ public class ConfigurationParams {
         break;
       case "-rtt":
         if (args.length > 1) {
-          rtt = Double.parseDouble(args[1]);
+          rtt = Double.parseDouble(args[1])/1000.0;
         } else {
           LOG.fatal("-rtt requires round trip time in millisecond");
         }
-        LOG.info("rtt = " + rtt + " ms");
+        LOG.info("rtt = " + rtt + " seconds");
         break;
       case "-maxcc":
       case "-max-concurrency":
