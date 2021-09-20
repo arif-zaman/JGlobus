@@ -800,7 +800,7 @@ public class GridFTPClient implements Runnable {
     }
 
     public class TransferMonitor implements Runnable {
-        final int interval = 5000;
+        final int interval = 1000;
         int timer = 0;
         Writer writer;
 
