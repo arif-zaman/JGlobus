@@ -12,3 +12,23 @@
 -use-hysteresis
 #Enables HARP with continous tuning as described in https://ieeexplore.ieee.org/abstract/document/8249824
 -use-online-tuning
+
+
+# -d gsiftp://oasis-dm.sdsc.xsede.org/oasis/scratch-comet/mazaman/temp_project/data1/large/
+#-s gsiftp://ie11.ncsa.illinois.edu:2811//scratch/sciteam/earslan/1G-120/
+#-d gsiftp://ie11.ncsa.illinois.edu:2811//scratch/sciteam/earslan/1TB-destination/
+# -s gsiftp://gridftp.stampede2.tacc.xsede.org:2811//scratch/06979/mazaman/data1/large/
+#-d gsiftp://gridftp.bridges.psc.edu:2811//pylon5/ci560np/earslan/1TB/
+#-cred /tmp/x509up_u501-xsede
+#-dc /tmp/x509up_u501-xsede
+#-dc /tmp/x509up_u501-xsede
+#-sc /tmp/x509up_u501-ncsa
+#-s ftp://134.197.113.71:50505/data/earslan/
+#-d ftp://134.197.113.70:50505/data/arif2/
+# -maxcc 32
+# -bw 40
+# -rtt 56
+# -bs 32
+# -input historical_data
+# -use-hysteresis
+# -use-online-tuning
